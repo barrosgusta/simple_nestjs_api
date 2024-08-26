@@ -1,0 +1,18 @@
+services:
+  web:
+    image: init
+    environment:
+      - DATABASE_URL=postgresql://barrosgusta:1312@192.168.2.11:5432/cars?schema=public
+    ports:
+      - "3001:3000"
+#     networks:
+#       - mynetwork
+# networks:
+#   mynetwork:
+#     driver: bridge
+#     ipam:
+#       config:
+#         - subnet: 255.255.255.0/24
+#           gateway: 192.168.2.1
+#           ip_range: 192.168.2.32/90
+  
